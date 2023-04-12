@@ -3,9 +3,9 @@ using UnityEngine;
 public class CameraScroller : MonoBehaviour
 {
 
-    [SerializedField]
+    [SerializeField]
     private float ScrollSpeedScalar = 1f;
-    [SerializedField]
+    [SerializeField]
     private Vector2 ScrollDirection = Vector2.right;
 
     private Camera cam;
@@ -16,7 +16,7 @@ public class CameraScroller : MonoBehaviour
 
     private void Update(){
         //Pan the camera along the ScrollDirection axis
-        cam.transform.position += ScrollDirection * ScrollSpeedScalar;
+        cam.transform.position += (Vector3)ScrollDirection * ScrollSpeedScalar;
     }
 
 }

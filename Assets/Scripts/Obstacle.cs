@@ -3,7 +3,7 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
 
-    [SerializedField]
+    [SerializeField]
     private BoxCollider2D hitbox;
 
 }

@@ -5,9 +5,9 @@ public class BulletBase : MonoBehaviour
 
     //Need to look into some object pooling setups for unity since these will be cycled in and out of use often :/
 
-    [SerializedField]
+    [SerializeField]
     private float BaseSpeed;
-    [SerializedField]
+    [SerializeField]
     private Vector2 Direction;
 
     void OnCollisionEnter2D(Collision2D col){
@@ -18,11 +18,11 @@ public class BulletBase : MonoBehaviour
         //Handle hurting the correct player and cleaning up
     }
 
-    public OnObstacleHit(){
+    public void OnObstacleHit(){
         //Same as above, and the name explains it all
     }
 
-    public OnCleanup(){
+    public void OnCleanup(){
         //Handle resetting the state and get ready for entry back into the object pool
     }
 
